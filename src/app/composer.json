@@ -1,0 +1,7 @@
+{
+    "name": "artshellorok/app",
+    "type": "project",
+    "require": {
+        "gabordemooij/redbean": "^5.1"
+    }
+}

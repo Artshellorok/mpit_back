@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  mysql:
+    image: mariadb
+    restart: always
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: db
+  apache:
+    build: './apache'
+    volumes:
+      - ./apache/conf:/etc/apache2/
+      - ./apache/php.ini:/etc/php7/php.ini
+      - ./src:/var/www/html
+    ports:
+      - "80:80"
+    links:
+      - mysql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    links:
+      - mysql
