@@ -7,6 +7,7 @@
         function __construct()
         {
             $url = $this->parseUrl();
+            $url = $url ? $url : ['main'];
             if(file_exists('../app/controllers/' . $url[0] . '.php'))
             {
                 $this->controller = $url[0];

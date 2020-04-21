@@ -2,6 +2,7 @@
     "name": "artshellorok/app",
     "type": "project",
     "require": {
-        "gabordemooij/redbean": "^5.1"
+        "gabordemooij/redbean": "^5.1",
+        "google/apiclient": "^2.0"
     }
 }
