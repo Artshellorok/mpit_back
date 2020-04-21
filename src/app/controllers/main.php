@@ -5,8 +5,6 @@
     {
         public function index()
         {
-            if (Auth::check()) {
-                header("Location: /login");
-            }
+            Auth::check();
         }
     }
