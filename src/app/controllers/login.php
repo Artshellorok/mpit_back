@@ -20,7 +20,6 @@
                     $token = $this->google->fetchAccessTokenWithAuthCode($_GET['code']);
                     if(!isset($token['error'])){
                         $this->google->setAccessToken($token['access_token']);
-                        session_start();
                         $_SESSION['token'] = $token['access_token'];
                         $google_service = new Google_Service_Oauth2($this->google);
 
