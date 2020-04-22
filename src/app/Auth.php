@@ -19,6 +19,12 @@
             self::init();
             if (!isset($_SESSION['token'])) {
                 header("Location: /login");
+                exit();
+            } else {
+                self::$google->setAccessToken($_SESSION['token']);
+                $google_service = new \Google_Service_Oauth2(self::$google);
+                $data = $google_service->userinfo->get();
+                return ["id" => $data->id, "name" => $data->name, "picture" => $data->picture];
             }
         }
     }

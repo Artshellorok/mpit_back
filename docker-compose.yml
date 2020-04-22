@@ -26,3 +26,11 @@ services:
       - 8080:8080
     links:
       - mysql
+  sphinx:
+    image: artshellorok/sphinx
+    volumes:
+      - ./sphinx/sphinx.conf:/etc/sphinx/sphinx.conf
+      - ./sphinx/data:/var/lib/sphinx/data
+    links:
+      - mysql
+    

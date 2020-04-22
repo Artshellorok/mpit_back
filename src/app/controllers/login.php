@@ -27,6 +27,7 @@
                         $user = R::find('users', 'id = ?',[$data->id]);
                         if (!$user) 
                             R::exec("insert into users(id,name,picture) values('" . $data->id."', '" . $data->name . "','".$data->picture."')");
+                        header("Location: /");
                         exit();
                     }
                 }
