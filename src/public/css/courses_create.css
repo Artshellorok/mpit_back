@@ -73,7 +73,8 @@ input[type="text"]{
   position:relative; 
   margin-bottom:45px; 
 }
-.group input 				{
+.group textarea 				{
+  resize: vertical;
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
@@ -82,7 +83,7 @@ input[type="text"]{
   border-bottom:1px solid #757575;
 
 }
-.group input:focus 		{ outline:none; }
+.group textarea:focus 		{ outline:none; }
 
 /* LABEL ======================================= */
 .group label 				 {
@@ -99,7 +100,7 @@ input[type="text"]{
 }
 
 /* active state */
-.group input:focus ~ label, input:valid ~ label 		{
+.group textarea:focus ~ label, textarea:valid ~ label 		{
   top:-20px;
   font-size:14px;
   color:#5264AE;
@@ -126,23 +127,23 @@ input[type="text"]{
 }
 
 /* active state */
-.group input:focus ~ .bar:before, input:focus ~ .bar:after {
+.group textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
   width:50%;
 }
 
 /* HIGHLIGHTER ================================== */
 .highlight {
   position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
+  height: 35px;
+  width: 100px;
+  top: 5px;
   left:0;
   pointer-events:none;
   opacity:0.5;
 }
 
 /* active state */
-.group input:focus ~ .highlight {
+.group textarea:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;

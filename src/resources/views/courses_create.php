@@ -26,23 +26,25 @@
                 </div>
             </div>
             <div class="col-sm-6 main">
-                <form class="course_form">
+                <form class="course_form" method="post" action="/courses/create">
                     <div class="d-flex name_input_cont">
-                        <input type="text" class="name_input" name="course_name" placeholder="Введите название курса/урока">
+                        <input type="text" class="name_input" name="title" placeholder="Введите название курса/урока">
                     </div>
                     <div class="input_field">
                         <div class="group">      
-                          <input type="text" required>
+                          <textarea type="text" name="desc" required></textarea>
                           <span class="highlight"></span>
                           <span class="bar"></span>
-                          <label>Заголовок</label>
+                          <label>Описание</label>
                         </div>
-                        <div class="group">      
-                          <input type="text" required>
-                          <span class="highlight"></span>
-                          <span class="bar"></span>
-                          <label>Краткое описание (необязательно)</label>
-                        </div>
+                        <label>Категория курса</label>
+                        <select class="custom-select" name="category">
+                            <option value="freelance">Фриланс</option>
+                            <option value="new">Изучаем новое</option>
+                            <option value="exp">Делимся опытом</option>
+                            <option value="home">#stayathome</option>
+                        </select>
+
                     </div>
                     <div class="input_field d-flex input_field__img">
                         Перетащите фото или видео
