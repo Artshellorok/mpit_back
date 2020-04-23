@@ -5,6 +5,6 @@
     {
         public function index()
         {
-            Auth::check();
+            $this->view('main');
         }
     }

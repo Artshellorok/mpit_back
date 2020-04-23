@@ -1,1 +1,3 @@
-404 Страници не найдина ежжи
+<?php
+include('layout/header.php'); ?>
+    <img src="/svg/logo.svg" />
