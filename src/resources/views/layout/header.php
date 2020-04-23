@@ -4,7 +4,7 @@
         <a href="#" class="header__search">
             <i class="fas fa-search fa-lg"></i>
         </a>
-        <a href="#" class="header__button">
+        <a href="/login" class="header__button">
             <i class="fab fa-google fa-lg" style="color: #162AB1"></i>
             <span style="color: #162AB1; margin-left: 10px;">
                 Вход/Регистрация
