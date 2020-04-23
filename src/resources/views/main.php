@@ -65,7 +65,56 @@
                     <!--<div class='clear' style="box-shadow: none"></div>-->
                 </div>
                 <div class="courses">
-                    <?php foreach ($data['rows'] as $course) {?>
+                    <?php foreach ($data['rows'] as $course) {
+                        if(isset($_GET['category'])){
+                            if($_GET['category'] == $course['category']){ ?>
+                                <div class="course d-flex">
+                                    <div class="course_video_cont">
+                                        <div class="course_video">
+                                        <?php switch ($course['file_type']) {
+                                            case 'video':?>
+                                                <video width="366" controls="controls">
+                                                    <source src="/files/<?php echo $course['file_path'] ?>" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+                                                </video>
+                                            <?php break;
+                                            case 'image':?>
+                                            <img src="/files/<?php echo $course['file_path'] ?>">
+                                            <?php break;
+                                            default:
+                                                break;
+                                        }?> </div>
+                                        <div class="course_video_link h-auto">
+                                            <a href="#">Смотреть урок</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="course_text">
+                                            <h2><?php echo $course['name'] ?></h2>
+                                            <p><?php echo $course['desc'] ?></p>
+                                        </div>
+                                        <div class="course_tags">
+                                            <?php switch ($course['category']) {
+                                                case 'home':?>
+                                                    <a href="#" class="course_category main__categories__stay">#Stay at home</a>
+                                                <?php break;
+                                                case 'new':?>
+                                                    <a href="#" class="course_category main__categories__new">#Изучаем новое</a>
+                                                <?php break;
+                                                case 'freelance':?>
+                                                    <a href="#" class="course_category main__categories__freelance">#Фриланс </a>
+                                                <?php break;
+                                                case 'experience':?>
+                                                    <a href="#" class="course_category main__categories__exp">#Делимся опытом</a>
+                                                <?php break;
+                                                default:
+                                                    break;
+                                            }?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php }
+                        }
+                        else{ ?>
                         <div class="course d-flex">
                             <div class="course_video_cont">
                                 <div class="course_video">
@@ -110,7 +159,7 @@
                                 </div>
                             </div>
                         </div>
-                    <?php } ?>
+                    <?php } } ?>
                     
                 </div>
             </div>
