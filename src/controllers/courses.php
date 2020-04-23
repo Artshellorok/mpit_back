@@ -20,7 +20,7 @@
 	    			echo "course created <a href='/courses/create'>fuck go back</a>";
 	    		}
 	    	}
-    		else { ?>
+    		else { /*?>
     		<form method="post" action="/courses/create" style="width: 300px; position: absolute; left: 50%; top: 50%; justify-content: center; transform: translate(-50%,-50%);">
     			<h1 style="text-align: center;">create course</h1>
                 <input type="text" placeholder="course name" style="display: flex; width: 100%;" name="title">
@@ -32,8 +32,10 @@
                 </select>
     			<textarea placeholder="course desc" style="display: flex; width: 100%; resize: vertical;" name="desc"></textarea>
     			<button style="display: flex; width: 100%; justify-content: center;" type="submit">create course</button>
-    		</form>
-    		<?php }
+    		</form> 
+            <?php */
+                $this->view('courses_create');
+            }
         }
         public function index($id = '', $stage = '')
         {

@@ -20,6 +20,8 @@
 }
 .menu__div{
     display: flex;
+    background: #fff;
+    margin-top: -10px;
     height: 400px;
     justify-content: center;
     align-content: center;

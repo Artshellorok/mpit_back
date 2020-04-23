@@ -13,11 +13,11 @@
         <div class="row">
             <div class="col-sm-3 menu">
                 <div>
-                    <img src="/svg/isehead.svg"/>
-                    <a href="" class="menu__logo">
+                    <img src="/svg/isehead.svg" style="margin: 0 !important"/>
+                    <a href="/" class="menu__logo">
                         <img src="/svg/logo.svg">
                     </a>
-                    <div class="menu__div">
+                    <div class="menu__div" style="background: white;">
                         <div style="margin-top: 184px;">
                             <a href="#">
                                 <i class="fas fa-user"></i>
@@ -83,6 +83,9 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+
     </div>
     <script src="/js/app.js"></script>
     </body>
